@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hypertrack.quickstart.android.github.R;
 import com.hypertrack.sdk.HyperTrack;
 import com.hypertrack.sdk.TrackingError;
@@ -14,7 +15,7 @@ import com.hypertrack.sdk.TrackingStateObserver;
 
 public class MainActivity extends AppCompatActivity implements TrackingStateObserver.OnTrackingStateChangeListener {
     private static final String TAG = "MainActivity";
-    private static final String PUBLISHABLE_KEY = "paste_your_key_here";
+    private static final String PUBLISHABLE_KEY = "_-_s4Di-y9a1-jEHY1flQT-RdG-Oun-8L0M88x5f8OIu8OMhgbQdjgEqcPOwGr6Kc5RRgsZxLQDnFYb0VtQxVQ";
 
     private TextView trackingStatusLabel;
     private HyperTrack sdkInstance;
@@ -34,9 +35,9 @@ public class MainActivity extends AppCompatActivity implements TrackingStateObse
                 .getInstance(PUBLISHABLE_KEY)
                 .addTrackingListener(this);
 
+        sdkInstance.start();
         deviceId.setText(sdkInstance.getDeviceID());
         Log.d(TAG, "device id is " + sdkInstance.getDeviceID());
-
     }
 
     @Override
