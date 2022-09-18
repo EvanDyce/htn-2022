@@ -6,40 +6,32 @@
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
+    android:gravity="center"
+    android:background="#FFFFFFFF"
     tools:context="com.hypertrack.quickstart.MainActivity">
 
-    <TextView
-        android:id="@+id/deviceIdTextView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text=""
-        android:textIsSelectable="true"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="57dp" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/deviceIdTextView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Looking for your favorite restaurant!!"
+            android:textIsSelectable="true"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="57dp" />
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="500px"
+            android:background="@drawable/burger_icon"/>
 
-    <TextView
-        android:id="@+id/statusLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:lineSpacingExtra="10sp"
-        android:padding="20dp"
-        android:text="@string/tracking_stopped"
-        android:textColor="@color/colorTextLight"
-        android:background="@color/colorLabelStopped"
-        android:textAlignment="center" />
-
-    <Button
-        android:id="@+id/button_query_position"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        />
-
+    </LinearLayout>
 
 </LinearLayout>
