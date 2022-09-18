@@ -34,4 +34,12 @@
         android:background="@color/colorLabelStopped"
         android:textAlignment="center" />
 
+    <Button
+        android:id="@+id/button_query_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        />
+
+
 </LinearLayout>
